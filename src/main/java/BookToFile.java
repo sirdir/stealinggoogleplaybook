@@ -24,19 +24,16 @@ public class BookToFile {
             btf.start();
             btf.openUrl("https://play.google.com/books");
             btf.authorize("email", "password"); //todo pass through sys prop
-//            btf.openUrl("https://play.google.com/books");
             btf.openBook("bookname"); //e.g. Соционика + работа над ошибками = инструментальная соционика. Пособие по инструментальной соционике
             sleep(5000);
 
-//            btf.spizdi("filename");
-
             String str = "Hello";
             String fileName = System.getProperty("user.dir") + File.separator + "target" + File.separator + "googlebook.html";
-            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
-            writer.write(str);
-            writer.append(str);
-
-            writer.close();
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+//            writer.write(str);
+//            writer.append(str);
+//
+//            writer.close();
         }
         finally {
             btf.close();
